@@ -1,0 +1,17 @@
+<template>
+
+    <lightning-card title="using for each">
+
+    <ul>
+        <template for:each={cars} for:item="car">
+
+            <li key={car.Id}> my car {car.Name} and colour is {car.Colour}</li>
+
+        </template>
+
+    </ul>
+
+</lightning-card>
+   
+     
+</template> 

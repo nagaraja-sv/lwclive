@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="using for iterator">
+        <ul>
+            <template iterator:it={cars}>
+                <li key={it.value.Id}> 
+                    <div if:true={it.first}> Starting ..</div>
+                    <div if:true={it.last}> Ending ..</div>
+                    my car {it.value.Name} and colour is {it.value.Colour}
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
