@@ -8,6 +8,8 @@ export default class ExploreMath extends LightningElement {
 
         this.totalTaxableAmount = (totalAmount * taxPercentage) /100;
 
+        return this.totalTaxableAmount;
+
     }
 
 }

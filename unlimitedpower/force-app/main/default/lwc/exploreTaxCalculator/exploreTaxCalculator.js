@@ -3,7 +3,8 @@ import { LightningElement } from 'lwc';
 export default class ExploreTaxCalculator extends LightningElement {
 
     totalAmount;
-    taxPercentage
+    taxPercentage;
+    totalTaxbaleAmount;
 
 
     handleChnage(event){
@@ -20,8 +21,13 @@ export default class ExploreTaxCalculator extends LightningElement {
             this.taxPercentage = event.target.value;
 
         }
+        if (this.taxPercentage !== undefined && this.totalAmount) {
+
+            this.totalTaxbaleAmount = this.template.querySelector('c-explore-math').calculate(this.totalAmount,this.taxPercentage);
+            
+        }
         
-        this.template.querySelector('c-explore-math').calculate(this.totalAmount,this.taxPercentage);
+        
 
     
 
