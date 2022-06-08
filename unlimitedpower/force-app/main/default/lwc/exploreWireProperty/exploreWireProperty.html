@@ -1,0 +1,24 @@
+<template>
+
+    <lightning-card title="Wire Property">
+
+        
+    
+    <template if:true={accounts.data}>
+
+        
+        <template for:each={accounts.data} for:item="account">
+
+            <p key={account.Id}>{account.Name}</p>
+
+        </template>
+
+            
+    </template>
+    <template if:true={accounts.error}>
+
+    </template>
+</lightning-card>
+
+
+</template>
