@@ -5,12 +5,13 @@ export default class ExploreWireFunction extends LightningElement {
 
     accounts;
     error;
-
-    @wire(getAccountsList)
+/*
+    @wire (getAccountsList)
     wiredAccounts({error,data}){
         if(data){
             this.accounts = data;
             this.error = undefined;
+
 
         }else if(error){
 
@@ -19,5 +20,20 @@ export default class ExploreWireFunction extends LightningElement {
 
         }
     }
+    */
 
-}   
+    @wire(getAccountsList)
+    wiredAccounts({ error, data }) {
+        if (data) {
+            this.accounts = data;   
+            this.error = error;
+        } else if (error) {
+            this.error = error;
+            this.accounts = undefined;
+        }
+    }
+
+    
+
+
+}
