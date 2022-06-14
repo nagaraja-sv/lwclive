@@ -5,23 +5,6 @@ export default class ExploreWireFunction extends LightningElement {
 
     accounts;
     error;
-/*
-    @wire (getAccountsList)
-    wiredAccounts({error,data}){
-        if(data){
-            this.accounts = data;
-            this.error = undefined;
-
-
-        }else if(error){
-
-            this.error = error;
-            this.accounts = undefined;
-
-        }
-    }
-    */
-
     @wire(getAccountsList)
     wiredAccounts({ error, data }) {
         if (data) {
