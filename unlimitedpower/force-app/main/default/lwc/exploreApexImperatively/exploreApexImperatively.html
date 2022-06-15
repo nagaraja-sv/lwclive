@@ -1,0 +1,15 @@
+<template>
+
+    <lightning-card title="Apex Imperative">
+        
+    <template for:each={accounts} for:item="account">
+
+            <p key={account.Id}>{account.Name}</p>
+    </template>
+    <template if:true={error}>
+
+    </template>
+</lightning-card>
+
+
+</template>

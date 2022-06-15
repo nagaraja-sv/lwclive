@@ -6,4 +6,10 @@ public with sharing class AccountController {
         return [SELECT ID, Name From Account];
     }
     
+    @AuraEnabled
+    public static List<Account> getAccountsImperativeList(){
+
+        return [SELECT ID, Name From Account];
+    }
+    
 }
