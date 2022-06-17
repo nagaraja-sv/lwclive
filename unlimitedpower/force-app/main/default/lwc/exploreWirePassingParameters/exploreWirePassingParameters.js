@@ -1,4 +1,3 @@
-
 import { api, LightningElement, wire } from 'lwc';
 import fectchContact from '@salesforce/apex/CustomContactController.fectchContact';
 

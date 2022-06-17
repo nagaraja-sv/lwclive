@@ -11,4 +11,4 @@ export default class ExploreEventsParent extends LightningElement {
         console.log('event.detail'+ event.detail);
 
     }
-}   
+}
